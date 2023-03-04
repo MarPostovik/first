@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<title>Тег marquee</title>
+	<style type="text/css">
+		body{
+			background-image: url(https://static.vecteezy.com/system/resources/previews/004/968/002/original/cute-abstract-modern-background-free-vector.jpg);
+		}
+		.button-56 {
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+a{
+  text-decoration: none;
+}
+
+		
+	</style>
+</head>
+<body>
+<marquee style=" background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-shading-background-abstract-colorful-background-colorful-art-picture-image_938007.jpg); background-size: cover;color: #560CA7; font-size: 50px; font-family: 'Lobster', cursive;"> Ми вивчаємо рядок, що рухається</marquee>
+<marquee style="background-image: url(https://img.freepik.com/premium-vector/hand-painted-background-violet-orange-colours_23-2148427578.jpg); color: blue; font-size: 50px; width: 50%;" direction="right"> Glory to Ukraine</marquee><marquee style="background-color: #CB7EE0 ; color: white; font-size: 50px; width: 50%;"> Glory to Ukraine</marquee>
+<marquee style="background-image: url(https://png.pngtree.com/background/20210709/original/pngtree-spray-powder-glare-colorful-background-picture-image_623477.jpg); color: blue; font-size: 50px; width: 25%; height: 200px; text-align: center;" direction="up"> Glory to Ukraine</marquee>
+<marquee style=" background-image: url(https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-036.jpg); color: blue; font-size: 50px; width: 25%; height: 200px; text-align: center;" direction="down" behavior="slide" loop="3"> Glory to Ukraine</marquee>
+<marquee style="background-image: url(https://images.fineartamerica.com/images-medium-large-5/green-grass-background-alubalish.jpg); background-size: cover; color: blue; font-size: 50px; width: 25%; height: 200px; text-align: center;" direction="down" behavior="alternate"> Glory to Ukraine</marquee>
+<marquee style="background-image: url(https://wallpaperaccess.com/full/1309059.jpg); background-size: cover; color: white; font-size: 25px; width: 23%; height: 200px; text-align: center;" direction="up"behavior="alternate"><marquee behavior="alternate">Glory to Ukraine</marquee></marquee>
+<marquee scrollamount="30"><img src="https://bestanimations.com/uploads/gifs/1697162351rotating-red-heart-gif-animation61.gif" width="150"></marquee>
+<marquee scrollamount="10"><img src="image/giphy.gif" width="150" alt="fox"></marquee>
+<marquee style="background-color: #B1F4F5; color: blue; font-size: 25px; width: 23%; height: 200px; text-align: center;" direction="up"behavior="alternate"><marquee behavior="alternate"><img src="https://bestanimations.com/uploads/gifs/1697162351rotating-red-heart-gif-animation61.gif" width="150"></marquee></marquee>
+
+<div style="width: 20%;"><a href="index.html"><button class="button-56" role="button" style="font-size: 15px;">Повернутися на головну сторінку</button></a></div>
+
+</body>
+</html>
