@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game with numbers</title>
+</head>
+<style>
+    body{
+    background-image: url(https://img.freepik.com/free-vector/gradient-numerology-background_23-2150066810.jpg?w=996&t=st=1681238537~exp=1681239137~hmac=7a5dfdc2672c2bfe284c56d147184e359d658111f9d1d4fb85ef335edfe031a5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+div{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        width: 50%;
+        background-color:rgb(161 207 208 / 83%);
+        font-size: 25px;
+        color: #212020;
+        border-radius: 20px;
+        padding: 15px 20px;
+        text-align: center;
+        margin: 10px auto;
+        margin-top: 15%;
+}
+</style>
+<body>
+    
+    <script>
+     
+let min=+prompt("Введіть мінімальне число")
+let max=+prompt("Введіть максимальне число")
+let numX=Math.round(min+Math.random()*(max-min));
+let num;
+let count=0;
+do{
+   
+    num=prompt("Введіть число",0);
+    count++
+    if(num==null){
+        document.write("<div><p>До побачення!</p></div>")
+    }else if(count>8){
+        document.write("<div><p>Ви використали свій ліміт спроб. На жаль Ви не вгадали. До побачення!</p></div>")
+    }else if(+num>numX){
+        alert(`Спроба №${count}. Ваше число більше, ніж те, що потрібно`)
+    }else if(+num<numX){
+       alert(`Спроба №${count}. Ваше число менше, ніж те, що потрібно`)
+    }else if(+num==numX){
+        document.write(" <div><p> Ви вгадали! Загадане число: "+numX+ ". Кількість спроб: "+ count+"</p></div>")    
+    }else{
+        alert("Ви ввели не число")
+    }
+}while (num!=numX && num!=null && count<=8);
+
+    </script>
+</body>
+</html>

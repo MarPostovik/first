@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Right triangle</title>
+    <style type="text/css">
+		div{
+			font-size: 35px; 
+			color: rgb(62, 17, 17);
+			text-align: center;
+            margin-top: 100px;
+            background-color: rgba(189, 220, 248, 0.922);
+            border-radius: 10px;
+            width: 80%;
+
+		}
+		.side{
+			width: 50px;
+			height: 30px;
+			font-size: 36px;
+			text-align: center;
+         margin-top: 10px;
+
+		}
+       
+body{
+    background-image: url(https://blutick-bucket.s3.eu-west-2.amazonaws.com/2020/06/Blutick-equipment-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 10px;
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+h1{
+        font-size: 40px;
+    }	
+
+	</style>
+</head>
+<body>
+    <script>
+        function right_triangle(){
+            let a=+document.triangle_f.a.value;
+            let b=+document.triangle_f.b.value;
+            let c=+document.triangle_f.c.value;
+            let S=a*b/2
+            area=document.getElementById("area");
+            let perimeter=document.getElementById("perimeter");
+            let P=a+b+c
+            if(a*a+b*b==c*c ){
+              string=S;
+              string1=P;
+            }else{
+                string=string1="Такого прямокутного трикутника не існує"
+        }
+        area.innerHTML = string;
+        perimeter.innerHTML = string1;
+    }
+        
+    </script>
+    <center><div>
+    <h1>Площа та периметр прямокутного трикутника</h1>
+    <form name="triangle_f" action="javascript:right_triangle()">
+        Довжина першого катета дорівнює <input class="side" name="a" type="text" value="" size="4"><br>
+        Довжина другого катета дорівнює <input class="side" name="b" type="text" value="" size="4"><br>
+        Довжина гіпотенузи дорівнює <input class="side" name="c" type="text" value="" size="4"><br>
+        <input class="btn" type="submit" value="Розрахувати">
+        <input class="btn" type="reset" name="reset" value="Скинути">
+    </form>
+    Площа  прямокутного трикутника дорівнює: <span id="area"></span><br/>
+    Периметр  прямокутного трикутника дорівнює: <span id="perimeter"></span>
+</div></center>
+</body>
+</html>

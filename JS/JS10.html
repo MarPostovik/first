@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /* let name = "Superman";
+document.write( name.charAt(0) ); // "S"
+document.write( name[5] ); // "m" як бачите квадратні дужки теж працюють*/
+
+
+/*let nameS = "SUPERMAN";
+let nameL = "forever";
+document.write( nameS.toLowerCase()+" "+nameL.toUpperCase());*/
+
+
+/*let str = "у дворі трава на траві дрова";
+document.write( str.indexOf("трав") ); // 8
+document.write( str.indexOf("у") ); // 0, тому, що "у" зустрінеться на самому початку рядка
+document.write( str.indexOf("трав", 9) ); // 17, і ми знайдемо "трав" ще раз*/
+
+
+/*let str = "у дворі трава на траві дрова";
+document.write(str.substring(2,6) ); // «двор»
+document.write(str.substr(2,6)); // «дворі »
+document.write(str.slice(2,-6)); // «дворі трава на траві»*/
+
+/*let letter=prompt("Введіть слово")
+document.write((letter.charAt(0)).toUpperCase()+letter.slice(1))*/
+
+/*function bigOne(str) {
+ // Порожній рядок під час такої перевірки дає 0  
+if (str.charAt(0)==0) return str= 'Прохання, не вводьте порожніх рядків ';
+  return str[0].toUpperCase() + str.slice(1); // тут ми перестворимо рядок
+}
+let strInBigOne = prompt("Введіть рядок", "ім'я пишеться з великої літери");
+document.write( bigOne(strInBigOne) );*/
+
+/*let text=prompt("Введи текст")
+text=text.toLowerCase()
+if(!!~text.indexOf("безкоштовно")||!!~text.indexOf("гарантія")){
+    document.write(true)
+}else{
+    document.write(false)
+}*/
+
+/*function findSpam(str) {  
+let lowCaseStr = str.toLowerCase();  
+return !!(~lowCaseStr.indexOf('безкоштовно') || ~lowCaseStr.indexOf('гарантія'));  }  
+document.write( 'Отримайте БЕЗКОШТОВНО, тільки клікнувши на посилання'+ ' перевірка на спам : ' + findSpam('Отримайте БЕЗКОШТОВНО, тільки клікнувши на посилання ') );  
+document.write('Це гарантія, що ви виграєте' + 'перевірка на спам : ' + findSpam('Це гарантія, що ви виграєте ') );
+document.write('Привіт як справи?'+ ' перевірка на спам : ' + findSpam('Привіт як справи?') );*/
+
+
+/*let str = "бредуть бобри в сирі бори. бобри хоробрі, а для бобрят добрі ";
+let target = prompt("Введіть підрядок для пошуку","ри"); // мета пошуку
+let position = 0;
+// Довжину рядка визначати не будемо використовуємо нескінченний цикл з перериванням break вкінці рядка
+while (true) {
+  let searchPos = str.indexOf(target, position);
+  if (searchPos == -1) break; // якщо рядок закінчився
+
+  document.write('знайшли ' +target+ ' тут: '+ searchPos );
+  position = searchPos + 1; // продовжити пошук з наступного
+}*/
+
+
+
+
+/*for(let i=0;i<num.length;i++){
+document.write(num[i]+"<br>")
+}*/
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

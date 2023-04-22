@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+    <style>
+      body{
+    background-image: url(https://wallpapercave.com/wp/wp2939993.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+      div{
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      width: 300px;
+      font-size: 25px;
+        color: #212020;
+        border-radius: 20px;
+        padding: 15px 20px;
+        text-align: center;
+        margin: 10px auto;
+        margin-top: 15%;
+        background-color: #47bbd6d9;
+    }
+    </style>
+</head>
+<body>
+   <script>
+    let userLogin=prompt("Enter your login");
+        if(userLogin=="user"){
+            let userPasssword=prompt("Enter your password","");
+            if(userPasssword=="JS"){
+                document.write("<div><p>Welcome!</div></p>")
+            }else if(userPassword==null){
+              document.write("<div><p>Password cancelled</div></p>")
+            }else{
+              document.write("<div><p>Password is wrong</div></p>")
+            }
+        }else if(userLogin==null){
+          document.write("<div><p>Login cancelled</div></p>")
+        }else{
+          document.write("<div><p>Login is wrong</div></p>")
+        }
+   </script>
+</body>
+</html>

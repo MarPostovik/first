@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style type="text/css">
+		div{
+			font-size: 25px; 
+			color: rgb(62, 17, 17);
+			text-align: left;
+            width: 70%;
+            
+            background-color: rgb(237, 249, 251, 0.9);
+            border-radius: 12px;
+            margin-bottom: 30px;
+		}
+		.side{
+			width: 300px;
+			height: 30px;
+			font-size: 25px;
+			text-align: center;
+
+		}
+       
+body{
+    background-image: url(https://media.istockphoto.com/id/1295810115/vector/question-mark-seamless-outline-pattern-grunge-background.jpg?s=612x612&w=0&k=20&c=jrx2GPiZfGAlkZAzPfFa7jKAaZbFp44EviOcyCHFnFY=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+
+.btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 10px;
+  margin-left: 15px;
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+	h1{
+        font-size: 40px;
+        text-align: center;
+        padding-top: 30px;
+    }	
+p{
+margin-left: 15px;
+margin-right: 15px;
+}
+	</style>
+</head>
+<body>
+    <script>
+        function Zelenskiy(){
+    let name = document.Zelenskiy.a.value;
+    let answer=document.getElementById("answer1");
+    let lowCaseName = name.toLowerCase(); 
+if (lowCaseName == 'володимир'||lowCaseName == 'володимир зеленський'||lowCaseName == 'вова'){
+    string='Правильно. Нашого президента звати '+name;
+} else{
+    string='Ви помилились. Президента України звати Володимир Зеленський.';
+}
+answer.innerHTML = string;
+}
+
+function Spiderman(){
+    let name = document.Spiderman.a.value;
+    let answer=document.getElementById("answer2");
+    let lowCaseName = name.toLowerCase(); 
+if (lowCaseName == 'пітер паркер'||lowCaseName == 'пітер'||lowCaseName == 'piter parker'){
+    string='Правильно. Людину-павука звати '+name;
+} else{
+    string='Ви помилились. Людину-павука звати Пітер Паркер.';
+}
+answer.innerHTML = string;
+}
+
+function Cinderella(){
+    let name = document.Cinderella.a.value;
+    let answer=document.getElementById("answer3");
+    let lowCaseName = name.toLowerCase(); 
+if (lowCaseName == 'попелюшка'||lowCaseName == 'сіндерелла'||lowCaseName == 'cinderella'){
+    string='Правильно. Цього персонажа звати '+name;
+} else{
+    string='Ви помилились. Цього персонажа звати Попелюшка.';
+}
+answer.innerHTML = string;
+}
+function Alice(){
+    let name = document.Alice.a.value;
+    let answer=document.getElementById("answer4");
+    let lowCaseName = name.toLowerCase(); 
+if (lowCaseName == 'аліса'||lowCaseName == 'аліса в країні див'||lowCaseName == 'alice'){
+    string='Правильно. Цього персонажа звати '+name;
+} else{
+    string='Ви помилились. Цього персонажа звати Аліса.';
+}
+answer.innerHTML = string;
+}
+function DiCaprio(){
+    let name = document.DiCaprio.a.value;
+    let answer=document.getElementById("answer5");
+    let lowCaseName = name.toLowerCase(); 
+if (lowCaseName == 'леонардо'||lowCaseName == 'леонардо ді капріо'||lowCaseName == 'ді капріо'||lowCaseName == 'дікапріо'||lowCaseName == 'леонардо дікапріо'){
+    string='Правильно. Цю людину звати '+name;
+} else{
+    string='Ви помилились. Цю людину звати Леонардо ДіКапріо.';
+}
+answer.innerHTML = string;
+}
+    </script>
+    
+   <center> <div >
+     <h1>Вікторина про відомих людей та персонажів</h1> 
+     <p style="font-weight: 900 ;">Запитання №1</p> 
+      <p>Як звати президента України?</p>
+        <form name="Zelenskiy" action="javascript:Zelenskiy()">
+            Введіть вашу відповідь:<input class="side" name="a" type="text" value="" size="4"><br>
+            <input class="btn" type="submit" value="Дізнатись відповідь">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        <span id="answer1"></span><br/>
+
+
+        <p style="font-weight: 900 ;">Запитання №2</p> 
+      <p>Як звати людину-павука?</p>
+        <form name="Spiderman" action="javascript:Spiderman()">
+            Введіть вашу відповідь:<input class="side" name="a" type="text" value="" size="4"><br>
+            <input class="btn" type="submit" value="Дізнатись відповідь">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        <span id="answer2"></span><br/>
+
+
+        <p style="font-weight: 900 ;">Запитання №3</p> 
+      <p>Яка дівчина жила зі своєю мачухою та падчерками, але завдяки допомозі феї стала найкрасивішою на балу та завоювала серце принца?</p>
+        <form name="Cinderella" action="javascript:Cinderella()">
+            Введіть вашу відповідь:<input class="side" name="a" type="text" value="" size="4"><br>
+            <input class="btn" type="submit" value="Дізнатись відповідь">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        <span id="answer3"></span><br/>
+
+
+        <p style="font-weight: 900 ;">Запитання №4</p> 
+      <p>Як звали дівчинку, яка заблукавши в лісі, зустріла чарівного кролика і опинилась в казковій країні разом з Червоними туфельками та Котом у чоботях?</p>
+        <form name="Alice" action="javascript:Alice()">
+            Введіть вашу відповідь:<input class="side" name="a" type="text" value="" size="4"><br>
+            <input class="btn" type="submit" value="Дізнатись відповідь">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        <span id="answer4"></span><br/>
+
+
+        <p style="font-weight: 900 ;">Запитання №5</p> 
+      <p>Хто зіграв головну роль у фільмі "Титанік" та отримав за неї премію "Оскар"?</p>
+        <form name="DiCaprio" action="javascript:DiCaprio()">
+            Введіть вашу відповідь:<input class="side" name="a" type="text" value="" size="4"><br>
+            <input class="btn" type="submit" value="Дізнатись відповідь">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        <span id="answer5"></span><br/>
+    </div></center>
+</body>
+</html>

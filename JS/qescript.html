@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Практика на if else</title>
+	<style type="text/css">
+		div{
+			font-size: 50px; 
+			color: green;
+			text-align: center;
+		}
+		.cqe{
+			width: 50px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+		}
+		.btn{
+			width: 250px;
+			height: 50px;
+			font-size: 36px;
+			color: purple;
+		}
+
+	</style>
+</head>
+<body>
+	<script>
+	function quadratic_equation() {
+  let a = document.qef.a.value;
+  let b = document.qef.b.value;
+  let c = document.qef.c.value;
+  let sol = document.getElementById("qe_sol");
+
+	let D, x1, x2; // змінні
+	D = b**2 - 4*a*c; // загальна формула дискрімінанту
+	x1 = ( -b + Math.sqrt(D) ) / (2*a); // перший корінь квадратного рівняння
+	x2 = ( -b - Math.sqrt(D) ) / (2*a); // другий корінь квадратного рівняння
+	if ( D > 0 ) {
+		
+		string="x1 = " + x1 + " x2 = " + x2 // вивід значення
+
+  }
+	else if ( D == 0 ) {
+		string= "x = " + x1 ; // вивід значення
+	} // else if D == 0
+	else {
+		string= "квадратне рівняння коренів не має!" ;
+	} // else (D < 0)
+
+
+  sol.innerHTML = string;
+}
+
+	</script>
+	<div>
+<p>Розв'язок квадратного рівняння a&middot;x&sup2; + b&middot;x + c = 0.</p>
+<form name="qef" action="javascript:quadratic_equation()">
+a <input class="cqe" name="a" type="text" value="" size="4">
+b <input class="cqe"  name="b" type="text" value="" size="4">
+c <input class="cqe"  name="c" type="text" value="" size="4">
+<input class="btn" type="submit" value="Розрахувати">
+<input class="btn" type="reset" name="reset" value="Скинути">
+</form>
+Рішення: <span id="qe_sol">Введить коефіцієнти та натисніть "Розрахувати"</span>
+</div>
+</body>
+</html>

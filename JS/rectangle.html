@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle</title>
+</head>
+<style>
+    h1{
+        font-size: 35px;
+    }
+    div{
+			font-size: 35px; 
+			color: #422800;
+			text-align: center;
+            margin-top: 150px;
+            margin-left: 250px;
+		}
+		.side{
+			width: 50px;
+			height: 35px;
+			font-size: 25px;
+			text-align: center;
+            margin-top: 10px;
+
+		}
+
+    
+
+.btn {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #fff;
+}
+
+.btn:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .btn {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}
+body{
+    background-image: url(https://image.slidesdocs.com/responsive-images/background/handdrawn-style-blue-cute-education-math-lovely-powerpoint-background_a698b5341c__960_540.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+</style>
+<body>
+    <script>
+        function rectangle(){
+            let a=+document.rectangle.a.value;
+            let b=+document.rectangle.b.value
+            let S=a*b
+            let area=document.getElementById("area");
+            let perimeter=document.getElementById("perimeter");
+            let P=(a+b)*2
+                string=S;
+                string1=P;
+        area.innerHTML = string;
+        perimeter.innerHTML = string1;
+}
+    </script>
+    <div >
+    <h1>Розрахунок площі та периметра прямокутника</h1> 
+       <form name="rectangle" action="javascript:rectangle()">
+     Довжина прямокутника:<input class="side" name="a" type="text" value="" size="4"><br>
+        Ширина прямокутника:<input class="side" name="b" type="text" value="" size="4"><br>          
+        <input class="btn" type="submit" value="Розрахувати">
+        <input class="btn" type="reset" name="reset" value="Скинути">
+       </form>
+       Площа прямокутника дорівнює: <span id="area"></span><br/>
+        Периметр прямокутника дорівнює: <span id="perimeter"></span>
+        </div>
+</body>
+</html>

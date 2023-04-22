@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game with numbers</title>
+ <style>
+    body{
+    background-image: url(https://img.freepik.com/free-vector/gradient-numerology-background_23-2150066810.jpg?w=996&t=st=1681238537~exp=1681239137~hmac=7a5dfdc2672c2bfe284c56d147184e359d658111f9d1d4fb85ef335edfe031a5);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+}
+    .side{
+			width: 100px;
+			height: 30px;
+			font-size: 30px;
+			text-align: center;
+            margin: 5px;
+            background-color: rgba(213, 243, 248, 0.901);
+            
+
+		}
+      .content{
+        
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        width: 50%;
+        background-color:rgb(161 207 208 / 83%);
+        font-size: 25px;
+        color: #212020;
+        border-radius: 20px;
+        padding: 15px 20px;
+        text-align: left;
+    
+
+    }
+    .btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+  will-change: transform;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+p{
+    margin-left: 10px;
+}
+ </style>
+</head>
+<body>
+    <h1 style="font-size: 35px;">Гра "Вгадай число"</h1>
+    <script>
+      const form = document.querySelector('form');
+const results = document.getElementById('results');
+let min, max, numX, num, count;
+
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // запобігти перезавантаженню сторінки при натисканні кнопки
+  
+  min = +form.elements.min.value;
+  max = +form.elements.max.value;
+  
+  if (min >= max) {
+    results.innerHTML = '<p>Мінімальне число повинно бути меншим за максимальне число.</p>';
+    return;
+  }
+  
+  numX = Math.round(min + Math.random() * (max - min));
+  num = 0;
+  count = 0;
+  
+  while (count < 8) {
+    num = +form.elements.num.value;
+    form.elements.num.value = ''; // очистити поле вводу
+    count++;
+    
+    if (isNaN(num)) {
+      results.innerHTML += `<p>Спроба №${count}. Введіть число.</p>`;
+    } else if (num > numX) {
+      results.innerHTML += `<p>Спроба №${count}. Ваше число більше, ніж те, що потрібно.</p>`;
+    } else if (num < numX) {
+      results.innerHTML += `<p>Спроба №${count}. Ваше число менше, ніж те, що потрібно.</p>`;
+    } else {
+      results.innerHTML += `<p>Ви вгадали! Загадане число: ${numX}. Кількість спроб: ${count}.</p>`;
+      break; // вийти з циклу, якщо число вгадане
+    }
+  }
+  
+  if (count >= 8) {
+    results.innerHTML += `<p>Ви використали свій ліміт спроб. На жаль, Ви не вгадали. До побачення!</p>`;
+  }
+});</script>
+   <div class="content">
+    
+    <p><b>Правила:</b> Вкажіть мінімальне та максимальне число. Програма загадає рандомне число з цього діапазону. Вам потрібно буде його вгадати. У Вас є 8 спроб.</p>
+
+    <form>
+        <label for="min">Мінімальне число:</label>
+        <input type="number" id="min" name="min" required><br><br>
+        
+        <label for="max">Максимальне число:</label>
+        <input type="number" id="max" name="max" required><br><br>
+        
+        <label for="num">Введіть число:</label>
+        <input type="number" id="num" name="num"><br><br>
+        
+        <input type="submit" value="Відправити">
+      </form>
+      
+      <div id="results"></div>
+ </div>
+</body>
+</html>

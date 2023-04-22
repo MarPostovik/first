@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grades</title>
+    <style type="text/css">
+		h1{
+            font-size: 40px;
+        }
+        
+        div{
+			font-size: 35px; 
+			color: rgb(62, 17, 17);
+			text-align: center;
+            margin-top: 190px;
+		}
+		.grade{
+			width: 50px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+
+		}
+       
+body{
+    background-image: url(https://media.istockphoto.com/id/598828674/photo/education-backgrounds.jpg?s=612x612&w=0&k=20&c=0ig9eOLAZaLj8gr-FHtSgsbDlarGprw1NWRFLXgpbvY=);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+.btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin-top: 10px ;
+  
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}</style>
+</head>
+<body>
+    <script>
+        function grades(){
+        let grade = +document.grade_level.a.value;
+        let answer=document.getElementById("level")
+switch(grade){
+    case 1:
+    case 2:
+    case 3:
+        string='Початковий 😟';
+        break;
+    case 4:
+    case 5:
+    case 6:
+        string='Середній 😐';
+        break;
+    case 7:
+    case 8:
+    case 9:
+        string='Достатній 😊';
+        break;
+    case 10:
+    case 11:
+    case 12:
+        string='Високий 😃';
+        break;
+default:
+    string='Такої оцінки не існує.'
+}
+answer.innerHTML = string;
+}
+    </script>
+    <div>
+        <h1>Дізнайся, на якому рівні ти навчаєшся</h1>
+        <form name="grade_level" action="javascript:grades()">
+        Введи свій середній бал:<input class="grade" name="a" type="text" value="" size="4"><br>
+        <input class="btn" type="submit" value="Дізнатися відповідь">
+        <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        Твій рівень: <span id="level"></span><br/>
+    </div>
+</body>
+</html>

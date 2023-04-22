@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       /*function showHi(){
+            let hi ='Привіт від функції'
+            alert(hi)
+        }
+        showHi()*/
+
+
+
+        /*let userName = 'ДокторХто'
+        function showHi(){
+           let userName='Капітан';
+            let hi ='Привіт тобі '+userName+' від функції'
+            alert(hi)
+            
+        }
+        showHi()
+        alert(userName)*/
+
+
+
+     /*  function checkSum(sum) {
+  if (sum > 1000) {
+    return true;
+  } else {
+    return confirm('Для знижки вам необхідно вибрати ще товарів на сумму більше 1000 грн. Продовжимо?');
+  }
+}
+let sum = +prompt('Вкажіть суму покупки?');
+ if (checkSum(sum)) {
+  alert( 'Знижка 20% забезпечена!' );
+} else {
+  alert( 'Нічого, у нас все одно низькі ціни!');
+}*/
+
+
+
+
+/*function max(x,y){
+    if(x>y){
+        return x
+    }else{
+      return y
+    }
+}
+let x = +prompt('Число')
+let y = +prompt('Число')
+alert(max(x,y))*/
+
+
+
+
+/*let x=+prompt("x","");
+let n=+prompt("n","");
+function power(x,n){
+    let result=1;
+for(let i =1; i<=n; i++){
+    result=x*result
+}return result
+
+}alert(power(x,n))*/
+
+/*let userLogin=prompt("Enter your login");
+        if(userLogin=="user"){
+            let userPasssword=prompt("Enter your password","");
+            if(userPasssword=="JS"){
+                alert("Welcome")
+            }else if(userPassword==null){
+                alert("Password cancelled")
+            }else{
+                alert("Password is wrong")
+            }
+        }else if(userLogin==null){
+            alert("Login cancelled")
+        }else{
+            alert("Login is wrong")
+        }*/
+    
+
+
+function form(){
+let x= document.number.x.value;
+let number= document.getElementById("number");
+    if(x<100){
+     your_number="Congratulations! Your number is "+x
+    }else{
+        your_number="Sorry but " +x+" is more than 100"
+    }
+number.innerHTML=your_number
+}
+
+    </script>
+    <form name="number" action="javascript:form()">
+       Enter number less than 100 <input type="text" name="x" value="0" size="2">
+       <input type="submit">
+       <input type="reset">
+    </form>
+<span id="number"></span>
+</body>
+</html>

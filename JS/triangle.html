@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area and perimeter of a triangle</title>
+    <style type="text/css">
+		div{
+			font-size: 35px; 
+			color: rgb(62, 17, 17);
+			text-align: center;
+            margin-top: 190px;
+		}
+		.side{
+			width: 50px;
+			height: 50px;
+			font-size: 36px;
+			text-align: center;
+
+		}
+       
+body{
+    background-image: url(https://image.slidesdocs.com/responsive-images/background/rubber-blank-paper-cute-pink-education-mathematics-powerpoint-background_a6aa809926__960_540.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.btn {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+  will-change: transform;
+}
+
+.btn:disabled {
+  pointer-events: none;
+}
+
+.btn:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+		
+
+	</style>
+</head>
+<body>
+    <script>
+        function triangle(){
+            let a=+document.triangle_f.a.value;
+            let b=+document.triangle_f.b.value;
+            let c=+document.triangle_f.c.value;
+            let p=(a+b+c)/2;
+            let P=a+b+c;
+            let S=Math.sqrt(p*(p-a)*(p-b)*(p-c));
+            let area=document.getElementById("area");
+            let perimeter=document.getElementById("perimeter");
+            if((a+b)>c && (b+c)>a && (a+c)>b && a>0 &&b>0 &&c>0 ){
+              string=S;
+              string1=P;
+            }else{
+                string=string1="Такого трикутника не існує"
+        }
+        area.innerHTML = string;
+        perimeter.innerHTML = string1;
+    }
+    </script>
+    <div>
+        <p>Площа та периметр трикутника зі сторонами a, b, c</p>
+        <form name="triangle_f" action="javascript:triangle()">
+            a<input class="side" name="a" type="text" value="" size="4">
+            b<input class="side" name="b" type="text" value="" size="4">
+            c<input class="side" name="c" type="text" value="" size="4">
+            <input class="btn" type="submit" value="Розрахувати">
+            <input class="btn" type="reset" name="reset" value="Скинути">
+        </form>
+        Площа трикутника дорівнює: <span id="area"></span><br/>
+        Периметр трикутника дорівнює: <span id="perimeter"></span>
+    </div>
+</body>
+</html>

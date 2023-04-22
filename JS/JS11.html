@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*let numbers = ["Нуль", "Один", "Два"];
+alert(numbers[0]);
+alert(numbers[1]);
+alert(numbers[2]);
+numbers[2]="не два"
+alert(numbers)
+numbers[3]="три"
+alert(numbers)*/
+
+
+/*let array=[];
+array[87]=true;
+alert(array.length)*/
+
+/*let numbers = ['Нуль','Один','Два'];
+numbers.pop(); // видалили два
+alert(numbers);
+numbers.push('Нове два'); // Додали нове два
+alert(numbers);
+numbers.shift(); // видалили нуль
+alert(numbers);
+numbers.unshift('Новий нуль'); // додали новий нуль
+alert(numbers);*/
+
+/*let colors=["yellow","blue"];
+alert(colors);
+colors.push("red");
+alert(colors);
+colors[colors.length-2]="black";
+alert(colors);
+colors.shift();
+alert(colors);
+colors.unshift("green","orange");
+alert(colors);*/
+
+
+
+        human = new Object();
+human.name   = "В'ячеслав";
+human.age    = 34;
+human.gender = 'Male';
+human.greet = function(personName) {
+    return this.name + ': Радий Вас бачити, ' + personName + '!'
+}
+// давайте перевіримо наш метод «привіт» для об'єкта «людина»
+alert(human.greet('Катерина'));
+alert(human.greet('Олег'));
+
+    
+
+
+</script>
+</body>
+</html>
